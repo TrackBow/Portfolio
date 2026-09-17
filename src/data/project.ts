@@ -94,9 +94,9 @@ export const projectsData: Project[] = [
     id: "10",
     title: "Portfolio",
     category: "Web Design",
-    description: "Portfolio interactif moderne inspiré d'une interface de dossiers suspendus.",
+    description: "Portfolio interactif et responsive développé avec React, Vite et Tailwind CSS pour présenter mes projets et compétences.",
     tech: ["React", "Vite", "Tailwind"],
-    link: "#", // Ramène en haut de la page actuelle (l'accueil du portfolio)
+    link: "#", 
     color: "bg-rose-100",
   },
 ];
