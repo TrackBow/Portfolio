@@ -93,7 +93,7 @@ function computeLayout() {
 const skillNotes: Record<string, string> = {
   Git: "Tous mes projets sont versionnés avec Git.",
   GitHub: "Mes dépôts publics sont sur github.com/TrackBow.",
-  Netlify: "Hébergement de ce portfolio et de son formulaire de contact.",
+  Netlify: "Hébergement et déploiement de ce portfolio.",
   Acoustique: "Étudiée pendant ma formation d'ingénieur Audiovisuel et Multimédia.",
   Ollama: "Utilisé pour faire tourner des LLM en local.",
   SQL: "Requêtes et modélisation de bases de données relationnelles.",

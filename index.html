@@ -17,19 +17,6 @@
     />
   </head>
   <body>
-    <!--
-      Formulaire "fantôme" pour Netlify Forms : Netlify analyse le HTML au déploiement
-      pour détecter les formulaires. Le vrai formulaire est rendu par React (Contact.tsx)
-      et poste les mêmes champs.
-    -->
-    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name" />
-      <input type="email" name="email" />
-      <input type="text" name="subject" />
-      <textarea name="message"></textarea>
-      <input type="text" name="bot-field" />
-    </form>
-
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

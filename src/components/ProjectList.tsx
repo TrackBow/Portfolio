@@ -1,4 +1,32 @@
 import { projectsData } from "../data/project";
+import type { Project } from "../data/project";
+
+function ProjectContent({ project }: { project: Project }) {
+  return (
+    <>
+      <div className="project-row">
+        <h3 className="project-title">{project.title}</h3>
+        <span className="project-category">{project.category}</span>
+      </div>
+
+      <div className="project-more">
+        <div className="project-more-inner">
+          <p className="project-desc">{project.description}</p>
+          <div className="project-meta">
+            <ul className="project-tech" aria-label="Technologies">
+              {project.tech.map((t) => (
+                <li key={t}>{t}</li>
+              ))}
+            </ul>
+            {project.link && (
+              <span className="project-cta">{project.linkLabel ?? "Voir le dépôt GitHub"} ↗</span>
+            )}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
 
 export function ProjectList() {
   return (
@@ -12,10 +40,9 @@ export function ProjectList() {
         </div>
 
         <ul className="projects">
-          {projectsData.map((project) => {
-            const isExternal = project.link.startsWith("http");
-            return (
-              <li key={project.id} id={`projet-${project.id}`} className="project">
+          {projectsData.map((project) => (
+            <li key={project.id} id={`projet-${project.id}`} className="project">
+              {project.link ? (
                 <a
                   href={project.link}
                   target="_blank"
@@ -23,30 +50,15 @@ export function ProjectList() {
                   className="project-link"
                   aria-label={`${project.title} : ${project.linkLabel ?? "voir le dépôt GitHub"}`}
                 >
-                  <div className="project-row">
-                    <h3 className="project-title">{project.title}</h3>
-                    <span className="project-category">{project.category}</span>
-                  </div>
-
-                  <div className="project-more">
-                    <div className="project-more-inner">
-                      <p className="project-desc">{project.description}</p>
-                      <div className="project-meta">
-                        <ul className="project-tech" aria-label="Technologies">
-                          {project.tech.map((t) => (
-                            <li key={t}>{t}</li>
-                          ))}
-                        </ul>
-                        <span className="project-cta">
-                          {project.linkLabel ?? "Voir le dépôt GitHub"} {isExternal ? "↗" : "↓"}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+                  <ProjectContent project={project} />
                 </a>
-              </li>
-            );
-          })}
+              ) : (
+                <div className="project-link" tabIndex={0}>
+                  <ProjectContent project={project} />
+                </div>
+              )}
+            </li>
+          ))}
         </ul>
       </div>
     </section>

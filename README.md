@@ -4,24 +4,27 @@ Portfolio one-page d'ingénieur audiovisuel et multimédia (INSA Hauts-de-France
 
 ## Sections
 - **Profil** : nom, accroche et onde sonore animée en canvas (réagit au curseur), photo, bio, CV.
-- **Parcours** : stages (ISIA Lab, LMI Audiovisuel) et diplôme, avec rapport et plaquettes.
+- **Parcours** : stages (ISIA Lab, LMI Audiovisuel) avec liens vers leurs sites, et diplôme avec plaquettes.
 - **Stack** : graphe interactif en SVG. Cliquer une catégorie la met en avant, cliquer une compétence liste les projets qui l'utilisent, les catégories se déplacent au glisser. Sur mobile, le graphe devient une liste de pastilles.
 - **Projets** : grande liste typographique ; au survol, description, technologies et lien vers le dépôt.
-- **Contact** : formulaire envoyé via Netlify Forms + liens directs.
+- **Contact** : bouton e-mail et liens directs (LinkedIn, GitHub, CV).
 
 ## Modifier le contenu
-- Projets : `src/data/project.ts`
-- Compétences : `src/data/skills.ts` (une compétence est reliée à un projet si son nom figure dans `tech` du projet)
+| Ce que je veux changer | Fichier |
+| --- | --- |
+| Nom, accroche, bio, boutons de l'accueil | `src/components/Hero.tsx` |
+| Stages, diplôme, liens du parcours | `src/components/Parcours.tsx` |
+| Liste des projets | `src/data/project.ts` |
+| Compétences et catégories du graphe | `src/data/skills.ts` |
+| Notes des compétences sans projet (Git, SQL…) | `src/components/Stack.tsx` (objet `skillNotes`) |
+| E-mail, liens LinkedIn/GitHub/CV, texte du contact | `src/components/Contact.tsx` |
+| Titre de l'onglet et description Google | `index.html` |
+| Couleurs, tailles, espacements | `src/index.css` (variables en haut du fichier) |
+
+Une compétence est reliée à un projet si son nom figure exactement dans le `tech` du projet.
 
 ## Stack technique
 React 18, TypeScript, Vite. CSS écrit à la main (`src/index.css`), police Schibsted Grotesk (Google Fonts).
-
-## Formulaire de contact (Netlify Forms)
-1. Déployer sur Netlify (le formulaire caché dans `index.html` permet à Netlify de le détecter).
-2. Netlify > *Forms* : activer la détection des formulaires si ce n'est pas déjà fait, puis redéployer.
-3. *Site configuration > Notifications > Emails and webhooks > Form submission notifications* : ajouter une notification e-mail vers votre adresse.
-
-En local (`npm run dev`), l'envoi échoue : c'est normal, seul Netlify traite le formulaire.
 
 ## Lancer en local
 ```bash

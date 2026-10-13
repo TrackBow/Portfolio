@@ -4,7 +4,8 @@ export interface Project {
   category: string;
   description: string;
   tech: string[];
-  link: string;
+  /** Lien vers le dépôt (optionnel : sans lien, le projet s'affiche sans être cliquable) */
+  link?: string;
   /** Texte affiché sur le lien (par défaut : "Voir le dépôt GitHub") */
   linkLabel?: string;
 }
@@ -17,8 +18,6 @@ export const projectsData: Project[] = [
     description:
       "Architecture mémorielle d'un assistant intelligent pour personnes déficientes visuelles : conception et optimisation d'un pipeline de génération augmentée par récupération (RAG) hybride et local, pour pallier la nature amnésique des assistants IA actuels.",
     tech: ["Python", "RAG", "LLM"],
-    link: "/COTTEL_Thibault_R5A_2025-2026.pdf",
-    linkLabel: "Lire le rapport de stage (PDF)",
   },
   {
     id: "booster",

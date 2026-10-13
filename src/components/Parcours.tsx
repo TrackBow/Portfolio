@@ -3,13 +3,13 @@ const steps = [
     kind: "Stage",
     title: "ISIA Lab, Université de Mons",
     text: "Architectures mémorielles et pipelines RAG pour un assistant intelligent destiné aux personnes déficientes visuelles.",
-    links: [{ href: "/COTTEL_Thibault_R5A_2025-2026.pdf", label: "Rapport de stage" }],
+    links: [{ href: "https://web.umons.ac.be/isia/", label: "Site de l'ISIA Lab" }],
   },
   {
     kind: "Stage",
     title: "LMI Audiovisuel",
     text: "Immersion dans l'audiovisuel professionnel et les infrastructures multimédias.",
-    links: [],
+    links: [{ href: "https://www.lmi-av.com/fr", label: "Site de LMI Audiovisuel" }],
   },
   {
     kind: "Diplôme",

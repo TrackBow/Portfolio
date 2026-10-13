@@ -699,67 +699,11 @@ textarea {
   overflow-wrap: anywhere;
 }
 
-.contact-form,
-.form-done {
-  display: grid;
-  gap: 18px;
-  padding: clamp(22px, 3.5vw, 36px);
-  border-radius: 20px;
-  background: var(--surface);
+.contact-cta {
+  margin-top: 28px;
 }
-.field-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-}
-.field {
-  display: grid;
-  gap: 6px;
-}
-.field span {
-  font-size: 14px;
-  font-weight: 500;
-}
-.field input,
-.field textarea {
-  width: 100%;
-  padding: 12px 14px;
-  border: 1px solid var(--line-strong);
-  border-radius: 12px;
-  background: var(--paper);
-  font-size: 16px;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-.field textarea {
-  resize: vertical;
-  min-height: 140px;
-}
-.field input::placeholder {
-  color: #9a9eaa;
-}
-.field input:focus,
-.field textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-soft);
-}
-.contact-form .btn {
-  justify-self: start;
-}
-.form-error {
-  font-size: 15px;
-  color: var(--error);
-}
-.form-done h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-}
-.form-done p {
-  color: var(--muted);
-}
-.form-done .btn {
-  justify-self: start;
+.contact-links {
+  margin-top: 0;
 }
 
 /* ---------- Footer ---------- */
@@ -825,9 +769,6 @@ textarea {
   .project-more-inner {
     grid-template-columns: 1fr;
     gap: 0;
-  }
-  .field-row {
-    grid-template-columns: 1fr;
   }
 }
 
