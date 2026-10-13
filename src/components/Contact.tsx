@@ -14,7 +14,7 @@ export function Contact() {
         <div>
           <h2 className="section-title">Me contacter</h2>
           <p className="contact-lead">
-            Une offre, un projet ou une question ? Le plus simple est de m'écrire par e-mail.
+            Envie de me contacter ? Le plus simple est de m'écrire par e-mail.
           </p>
           <a className="btn btn-primary contact-cta" href={`mailto:${EMAIL}`}>
             M'écrire un e-mail

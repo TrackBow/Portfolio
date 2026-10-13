@@ -225,7 +225,7 @@ export function Stack() {
         <h3 className="stack-detail-title">Explorer</h3>
         <p className="stack-detail-text">
           Cliquez sur une catégorie pour la mettre en avant, puis sur une compétence pour voir les
-          projets où je l'ai utilisée. Vous pouvez aussi faire glisser les catégories.
+          projets où je l'ai utilisée. 
         </p>
       </>
     );
