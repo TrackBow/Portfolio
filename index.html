@@ -3,10 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thibault Cottel - Portfolio</title>
+    <title>Thibault Cottel · Ingénieur audiovisuel & multimédia</title>
+    <meta
+      name="description"
+      content="Portfolio de Thibault Cottel, ingénieur INSA Hauts-de-France spécialisé en audiovisuel et multimédia : traitement du signal, IA (RAG, LLM) et développement logiciel."
+    />
+    <meta name="theme-color" content="#fcfcfd" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <!--
+      Formulaire "fantôme" pour Netlify Forms : Netlify analyse le HTML au déploiement
+      pour détecter les formulaires. Le vrai formulaire est rendu par React (Contact.tsx)
+      et poste les mêmes champs.
+    -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
+
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>.
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

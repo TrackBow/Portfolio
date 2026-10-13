@@ -5,98 +5,101 @@ export interface Project {
   description: string;
   tech: string[];
   link: string;
-  color: string;
+  /** Texte affiché sur le lien (par défaut : "Voir le dépôt GitHub") */
+  linkLabel?: string;
 }
 
 export const projectsData: Project[] = [
   {
-    id: "01",
-    title: "Projet VisIA",
-    category: "Intelligence Artificielle & RAG",
-    description: "Conception et développement d'une architecture mémorielle d'un assistant intelligent pour personnes déficientes visuelles. Conception et Optimisation d'un pipeline complet de Génération Augmentée par Récupération (RAG) hybride et local. L'objectif visé est de palier la nature amnésique des solutions d'intelligence artificielle actuelles.",
-    tech: ["Python", "RAG", "IA", "LLM"],
+    id: "visia",
+    title: "VisIA",
+    category: "IA & RAG",
+    description:
+      "Architecture mémorielle d'un assistant intelligent pour personnes déficientes visuelles : conception et optimisation d'un pipeline de génération augmentée par récupération (RAG) hybride et local, pour pallier la nature amnésique des assistants IA actuels.",
+    tech: ["Python", "RAG", "LLM"],
     link: "/COTTEL_Thibault_R5A_2025-2026.pdf",
-    color: "bg-amber-100",
+    linkLabel: "Lire le rapport de stage (PDF)",
   },
   {
-    id: "02",
+    id: "booster",
     title: "Booster",
-    category: "Hardware & Systèmes",
-    description: "Analyse et mesure de temps de réaction combinant une intégration ESP32 et une interface TypeScript.",
+    category: "Embarqué",
+    description:
+      "Analyse et mesure de temps de réaction, combinant une intégration ESP32 et une interface TypeScript.",
     tech: ["TypeScript", "ESP32", "C++"],
     link: "https://github.com/TrackBow",
-    color: "bg-yellow-100",
+    linkLabel: "Voir mon GitHub",
   },
   {
-    id: "03",
-    title: "World Cup predictor",
-    category: "Data & IA",
-    description: "Prédiction de matchs de football basée sur des modèles de données et l'analyse statistique.",
-    tech: ["Python", "Pandas", "Machine Learning"],
+    id: "audio-denoiser",
+    title: "Audio Spectral Denoiser",
+    category: "Traitement du signal",
+    description:
+      "Réduction de bruit stationnaire sur des flux audio, avec un algorithme basé sur la transformée de Fourier rapide.",
+    tech: ["Python", "NumPy", "SciPy", "FFT"],
+    link: "https://github.com/TrackBow/Audio-Spectral-Denoiser",
+  },
+  {
+    id: "world-cup",
+    title: "World Cup Predictor",
+    category: "Data & ML",
+    description:
+      "Prédiction de résultats de matchs de football à partir de données historiques et d'analyse statistique.",
+    tech: ["Python", "Pandas", "Machine learning"],
     link: "https://github.com/TrackBow/world-cup-predictor",
-    color: "bg-lime-100",
   },
   {
-    id: "04",
+    id: "live-sport",
     title: "Live Sport Tracker",
     category: "Web & API",
-    description: "Application temps réel de suivi de scores de matchs et de classements sportifs avec notifications personnalisées.",
-    tech: ["Python", "Streamlit", "API Rest"],
+    description:
+      "Suivi en temps réel des scores et des classements, avec notifications personnalisées.",
+    tech: ["Python", "Streamlit", "API REST"],
     link: "https://github.com/TrackBow/Live-Sport-Tracker",
-    color: "bg-emerald-100",
   },
   {
-    id: "05",
-    title: "Beach Drawing in C++",
-    category: "Graphisme & Bas Niveau",
-    description: "Génération procédurale et simulation graphique de tracés et de motifs artistiques.",
-    tech: ["C++", "OpenGL", "Maths"],
-    link: "https://github.com/TrackBow/Beach-Drawing-coded-in-C",
-    color: "bg-teal-100",
-  },
-  {
-    id: "06",
+    id: "knn",
     title: "KNN",
     category: "Algorithmique",
-    description: "Application en C et GLFW trouvant et affichant les k-plus proches voisins en temps réel.",
+    description:
+      "Application en C qui calcule et affiche en temps réel les k plus proches voisins d'un point.",
     tech: ["C", "GLFW", "OpenGL"],
     link: "https://github.com/TrackBow/KNearestNeighbors",
-    color: "bg-sky-100",
   },
   {
-    id: "07",
-    title: "Audio Spectral Denoiser",
-    category: "Traitement du Signal",
-    description: "Algorithme basé sur la Transformée de Fourier Rapide pour la réduction de bruit stationnaire sur des flux audio.",
-    tech: ["Python", "NumPy", "SciPy"],
-    link: "https://github.com/TrackBow/Audio-Spectral-Denoiser",
-    color: "bg-indigo-100",
+    id: "beach-drawing",
+    title: "Beach Drawing",
+    category: "Graphisme",
+    description:
+      "Génération procédurale et simulation graphique de tracés et de motifs artistiques.",
+    tech: ["C++", "OpenGL"],
+    link: "https://github.com/TrackBow/Beach-Drawing-coded-in-C",
   },
   {
-    id: "08",
+    id: "breakout",
     title: "Breakout",
-    category: "Jeux Vidéo",
-    description: "Recréation du jeu d'arcade classique avec une gestion rigoureuse de la physique des collisions.",
+    category: "Jeu vidéo",
+    description:
+      "Recréation du casse-briques d'arcade, avec une gestion soignée de la physique des collisions.",
     tech: ["C++", "SDL2"],
     link: "https://github.com/TrackBow/Breakout",
-    color: "bg-violet-100",
   },
   {
-    id: "09",
+    id: "culture-quiz",
     title: "Culture Quiz",
-    category: "Web App",
-    description: "Application interactive de quiz culturel avec gestion des scores et des thématiques.",
-    tech: ["React", "TypeScript", "Tailwind"],
+    category: "Web app",
+    description:
+      "Quiz de culture générale interactif, avec thèmes et suivi des scores.",
+    tech: ["React", "TypeScript", "Tailwind CSS"],
     link: "https://github.com/TrackBow/Culture-quiz",
-    color: "bg-pink-100",
   },
   {
-    id: "10",
-    title: "Portfolio",
-    category: "Web Design",
-    description: "Portfolio interactif et responsive développé avec React, Vite et Tailwind CSS pour présenter mes projets et compétences.",
-    tech: ["React", "Vite", "Tailwind"],
-    link: "#", 
-    color: "bg-rose-100",
+    id: "portfolio",
+    title: "Ce portfolio",
+    category: "Web design",
+    description:
+      "Le site que vous lisez : React, Vite et TypeScript, une onde dessinée en canvas et un graphe de compétences en SVG.",
+    tech: ["React", "Vite", "TypeScript"],
+    link: "https://github.com/TrackBow/Portfolio",
   },
 ];
