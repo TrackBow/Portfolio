@@ -4,7 +4,8 @@ const links = [
   { label: "E-mail", value: EMAIL, href: `mailto:${EMAIL}` },
   { label: "LinkedIn", value: "thibault-cottel", href: "https://linkedin.com/in/thibault-cottel" },
   { label: "GitHub", value: "TrackBow", href: "https://github.com/TrackBow" },
-  { label: "CV", value: "Télécharger (PDF)", href: "/20260727_CV_Thibault.pdf" },
+  { label: "CV IA", value: "Télécharger (PDF)", href: "/CV_Thibault_Cottel_IA.pdf" },
+  { label: "CV Signal", value: "Télécharger (PDF)", href: "/CV_Thibault_Cottel_Signal.pdf" },
 ];
 
 export function Contact() {

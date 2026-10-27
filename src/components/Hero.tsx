@@ -40,8 +40,11 @@ export function Hero() {
             <a className="btn btn-primary" href="#projets">
               Voir mes projets
             </a>
-            <a className="btn btn-ghost" href="/20260727_CV_Thibault.pdf" target="_blank" rel="noopener noreferrer">
-              Télécharger mon CV
+            <a className="btn btn-ghost" href="/CV_Thibault_Cottel_IA.pdf" target="_blank" rel="noopener noreferrer">
+              CV IA / logiciel
+            </a>
+            <a className="btn btn-ghost" href="/CV_Thibault_Cottel_Signal.pdf" target="_blank" rel="noopener noreferrer">
+              CV signal / audiovisuel
             </a>
           </div>
         </div>
